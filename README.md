@@ -1,1 +1,14 @@
-# mlops
+# Submission 1: SMS-Spam-Detection
+Nama: Fahrul Firmansyah
+
+Username dicoding: fahrul_firmansyah
+
+| | Deskripsi |
+| ----------- | ----------- |
+| Dataset | [SMS Spam Collection (Text Classification)](https://www.kaggle.com/datasets/thedevastator/sms-spam-collection-a-more-diverse-dataset)|
+| Masalah | Spam merupakan masalah yang sering kali kita temukan pada era saat ini yang hampir semua hal mengalami digitalisasi. Salah satu tempat yang sering kali menjadi tempat spam adalah SMS. Short Message Service (SMS) merupakan layanan komunikasi yang mengirim pesan singkat dengan panjang karakter hanya 160 hingga 224. SMS umumnya digunakan untuk komunakasi singkat ataupun peringatan untuk situasi urgensi. Namun terkadang terdapat beberapa pesan SMS yang tidak memiliki nilai urgensi, hal ini menyebabkan banyak orang seringkali mengabaikan pesan yang datang dari SMS, sehingga hal ini meningkatakan pesan peringatan yang dikirim melalui SMS juga akan ikut diabaikan.|
+| Solusi machine learning |Oleh karena itu dibutuhkan sebuah alat yang dapat mengkategorikan pesan SMS termasuk spam atau tidak secara otimatis. Dengan adanya alat ini pesan yang memiliki nilai urgenitas yang tinggi akan disampaikan, sedangkan pesan yang tidak memiliki urgenitas tinggi akan dikategorikan sebagai pesan yang dapat diabaikan atau spam.|
+| Metode pengolahan | Dataset yang digunakan pada proyek ini memiliki dua kolom, yaitu "sms" dan "label". Kolom "sms" merupakan kolom yang berisi text yang disampaikan melalui SMS. Kolom "label" berisi angka "1" dan "0", "1" menandakan bahwa pesan merupakan spam dan "0" menandakan bawah pesan bukan merupakan spam. Sebelum digunakan untuk melatih model, semua teks yang ada pada kolom "sms" akan diubah terlebih dahulu menjadi non-kapital, dan semua data pada kolom "label" akan diubah menjadi format integer. Setelah itu, dataset akan dibagi ke dalam train dan evaluation dengan rasio 80:20.|
+| Arsitektur model | Model yang digunakan pada proyek adalah model jaringan syaratf tiruan yang dibangun menggunakan beberapa jenis layer, yaitu Input, TextVectorization, Embedding, dan GlobalAveragePooling1D, dan Dense. Untuk fully connected layer pada model proyek ini terdiri dari 2 dense layer dengan masing-masin unit sebanyak 64 dan 32 menggunakan fungsi aktivasi relu. Dan pada output layer model menggunakan dense layer dengan 1 unit dan fungsi aktivasi sigmoid. Untuk perhitungan loss yang digunakan pada model ini adalah binary crossentropy, model ini juga menggunakan Adam sebagai optimizernya.|
+| Metrik evaluasi | Untuk mengevaluasi performa dari model yang digunakan, proyek ini menggunakan beberapa metrik evaluasi, yaitu AUC, FalsePositives, TruePositives, FalseNegatives, TrueNegatives, dan Binary Accuracy.|
+| Performa model | Model yang telah dibuat memiliki performa dengan capaian metriks AUC 99%, FalsePositives 110, TruePositives 5333, FalseNegatives 667, TrueNegatives 38320, dan Binary Accuracy 98%. |
